@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Login from './components/Login';
-import StockView from './components/StockView';
+import Home from './components/Home';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
   return (
     <>
-      {loggedIn ? <StockView /> : <Login onSuccess={() => setLoggedIn(true)} />}
+      {loggedIn ? <Home /> : <Login onSuccess={() => setLoggedIn(true)} />}
     </>
   );
 }

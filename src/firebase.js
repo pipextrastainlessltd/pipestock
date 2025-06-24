@@ -1,21 +1,18 @@
-// src/firebase.js
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore";
 
-// Firebase config
 const firebaseConfig = {
-  apiKey: "AIzaSyARdshAeqgJBNWJZBrmfrxoBgxt6CmVS50",
-  authDomain: "pipestock-d292e.firebaseapp.com",
-  projectId: "pipestock-d292e",
-  storageBucket: "pipestock-d292e.firebasestorage.app",
-  messagingSenderId: "895031219328",
-  appId: "1:895031219328:web:9445b01d4f22696cfe8265",
-  measurementId: "G-QPPRCNNHHM"
+  apiKey: "AIzaSyD4ztdj41ggb21d_cKygq0cxxQzCINKyzY",
+  authDomain: "pipestock2025.firebaseapp.com",
+  projectId: "pipestock2025",
+  storageBucket: "pipestock2025.appspot.com",
+  messagingSenderId: "591046290131",
+  appId: "1:591046290131:web:0e52d5cff4cdb00fb70226",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const auth = getAuth(app);
+const db = getFirestore(app);
 
-export const auth = getAuth(app);
+export { auth, db };
